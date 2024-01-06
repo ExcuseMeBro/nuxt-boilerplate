@@ -22,6 +22,13 @@
             <span class="ms-3">Home</span>
           </nuxt-link>
         </li>
+        <li>
+          <nuxt-link to="/dashboard/products"
+             class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <UIcon name="i-heroicons-shopping-cart" dynamic />
+            <span class="ms-3">Products</span>
+          </nuxt-link>
+        </li>
       </ul>
     </div>
   </aside>
