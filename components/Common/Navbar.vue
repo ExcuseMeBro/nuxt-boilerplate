@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import {darkMode} from "#tailwind-config";
-import {onMounted} from "vue";
-
 const items = [
   [{
     label: 'ben@example.com',
@@ -44,7 +41,7 @@ watch(() => darkMode.value, (val) => {
       <div class="flex items-center justify-between">
         <div class="flex items-center justify-start rtl:justify-end">
           <span
-                class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">NUXT3</span>
+              class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">NUXT3</span>
         </div>
         <div class="flex items-center">
           <div class="flex items-center space-x-2">
@@ -53,8 +50,9 @@ watch(() => darkMode.value, (val) => {
                 off-icon="i-heroicons-moon-20-solid"
                 v-model="darkMode"
             />
-            <UDropdown :items="items" :ui="{ item: { disabled: 'cursor-text select-text' } }" :popper="{ placement: 'bottom-start' }">
-              <UAvatar src="https://avatars.githubusercontent.com/u/739984?v=4" />
+            <UDropdown :items="items" :ui="{ item: { disabled: 'cursor-text select-text' } }"
+                       :popper="{ placement: 'bottom-start' }">
+              <UAvatar src="https://avatars.githubusercontent.com/u/739984?v=4"/>
 
               <template #account="{ item }">
                 <div class="text-left">
@@ -70,7 +68,7 @@ watch(() => darkMode.value, (val) => {
               <template #item="{ item }">
                 <span class="truncate">{{ item.label }}</span>
 
-                <UIcon :name="item.icon" class="flex-shrink-0 h-4 w-4 text-gray-400 dark:text-gray-500 ms-auto" />
+                <UIcon :name="item.icon" class="flex-shrink-0 h-4 w-4 text-gray-400 dark:text-gray-500 ms-auto"/>
               </template>
             </UDropdown>
           </div>
