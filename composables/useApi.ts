@@ -1,11 +1,10 @@
-export const useApi = <T>(request: string, opts?: any) => {
+export const useApi = <ResponseType>(request: string, options?: any) => {
     const config = useRuntimeConfig()
-
-    return useFetch<T>(request, { baseURL: config.public.baseURL, ...opts })
-}
-
-export const usePostApi = <T>(request: string, opts?: any) => {
-    const config = useRuntimeConfig()
-
-    return $fetch<T>(request, { baseURL: config.public.baseURL, ...opts })
+    const headers = useRequestHeaders()
+    return useFetch<ResponseType>(request, {
+        baseURL: config.public.baseURL,
+        // server: false,
+        ...headers,
+        ...options
+    })
 }

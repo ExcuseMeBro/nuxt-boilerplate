@@ -18,7 +18,7 @@ const {data: products, error, pending, refresh} = await useApi<IProducts[]>('/pr
     return products.filter((product) => product.category.id === +selectedCategoryId.value)
   },
   lazy: true,
-  pick: ['title'],
+  // pick: ['title'],
   watch: [selectedCategoryId],
   key: 'testpick'
 })
@@ -32,7 +32,7 @@ const {data: nuxtD} = useNuxtData('testpick')
 </script>
 <template>
   <div>
-    <pre>{{ nuxtD }}</pre>
+<!--    <pre>{{ nuxtD }}</pre>-->
     <div class="mb-3 flex items-center space-x-3">
       <select v-model="selectedCategoryId" id="countries" class="bg-gray-50 w-fit border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
         <option selected>Choose a category</option>
