@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       },
     },
     css: ['~/assets/css/main.css'],
-    modules: ['@nuxt/ui', '@nuxtjs/color-mode'],
+    modules: ['@nuxt/ui', '@nuxtjs/color-mode', "@nuxtjs/eslint-module", "@nuxt/eslint"],
     plugins: [],
     postcss: {
         plugins: {
