@@ -1,24 +1,41 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    devtools: {
-      enabled: true,
-
-      timeline: {
-        enabled: true,
+  srcDir: 'src/',
+  typescript: {
+    strict: true,
+    typeCheck: true
+  },
+  imports: {
+    // Auto-import pinia stores defined in `~/stores`
+    dirs: ['stores']
+  },
+  modules: [
+    // Installed modules
+    '@vueuse/nuxt',
+    '@pinia/nuxt',
+    '@nuxtjs/i18n'
+  ],
+  pinia: {
+    autoImports: [
+      'defineStore',
+      'storeToRefs'
+    ]
+  },
+  i18n: {
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: false,
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        name: 'English'
       },
-    },
-    css: ['~/assets/css/main.css'],
-    modules: ['@nuxt/ui', '@nuxtjs/color-mode', "@nuxtjs/eslint-module", "@nuxt/eslint"],
-    plugins: [],
-    postcss: {
-        plugins: {
-            tailwindcss: {},
-            autoprefixer: {},
-        },
-    },
-    runtimeConfig: {
-        public: {
-            baseURL: process.env.NUXT_PUBLIC_API_URL || 'https://api.example.com/',
-        },
-    },
+      {
+        code: 'uz',
+        iso: 'uz-UZ',
+        name: 'O\'zbek'
+      }
+    ],
+    defaultLocale: 'en'
+  }
 })
