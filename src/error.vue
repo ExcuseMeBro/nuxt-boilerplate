@@ -1,17 +1,18 @@
 <script setup lang="ts">
-const error: any = useError()
+interface AppError {
+  statusCode?: number
+  statusMessage?: string
+  message?: string
+}
 
-const errorCode = computed(() => (
-  error.value instanceof Error || !error.value
-    ? 500
-    : error.value.statusCode
-))
+const { t } = useI18n()
+const error = useError()
+const currentError = computed(() => error.value as AppError | undefined)
 
-const errorMessage = computed(() => (
-  error.value instanceof Error || !error.value
-    ? 'Something went wrong'
-    : error.value.statusMessage
-))
+const errorCode = computed(() => currentError.value?.statusCode ?? 500)
+const errorMessage = computed(
+  () => currentError.value?.statusMessage ?? currentError.value?.message ?? t('errors.default')
+)
 
 const handleError = () => {
   clearError({ redirect: '/' })
@@ -27,7 +28,7 @@ const handleError = () => {
       {{ errorMessage }}
     </p>
     <button @click="handleError">
-      Back to home
+      {{ t('errors.backHome') }}
     </button>
   </div>
 </template>

@@ -1,5 +1,5 @@
 export interface CounterState {
-  count: number;
+  count: number
 }
 
 export const useCounterStore = defineStore('counter', () => {

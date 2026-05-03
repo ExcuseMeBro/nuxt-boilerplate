@@ -1,5 +1,5 @@
 export default defineEventHandler(() => {
   return {
-    message: 'Hello!'
+    message: 'Hello from REST API.'
   }
 })

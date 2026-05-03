@@ -1,3 +1,31 @@
 {
-  "welcome": "Assalamu alaykum"
+  "meta": {
+    "title": "Nuxt Boilerplate",
+    "description": "REST, JWT auth, i18n, Biome, Pinia va Remotion bilan production-ready Nuxt starter."
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "users": "Foydalanuvchilar",
+    "login": "Kirish",
+    "logout": "Chiqish"
+  },
+  "home": {
+    "title": "Production-ready Nuxt starter",
+    "description": "REST-first ilovalarni JWT auth, typed API helperlar, i18n, strict TypeScript, Biome, Pinia va Remotion bilan yarating.",
+    "restDemo": "REST API demo"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Parol",
+    "signIn": "Kirish",
+    "signingIn": "Kirilmoqda...",
+    "failed": "Kirish amalga oshmadi. Ma'lumotlarni tekshiring."
+  },
+  "errors": {
+    "default": "Nimadir xato ketdi.",
+    "notFound": "Sahifa topilmadi",
+    "backHome": "Bosh sahifaga qaytish"
+  },
+  "footer": "Nuxt best practice asosida qurilgan.",
+  "welcome": "Nuxt Boilerplate'ga xush kelibsiz"
 }

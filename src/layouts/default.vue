@@ -1,14 +1,26 @@
 <script setup lang="ts">
+const { t } = useI18n()
 </script>
 
 <template>
   <header>
-    <LocaleSwitch />
+    <nav aria-label="Main navigation">
+      <NuxtLink to="/">
+        {{ t('nav.home') }}
+      </NuxtLink>
+      <NuxtLink to="/users">
+        {{ t('nav.users') }}
+      </NuxtLink>
+      <NuxtLink to="/login">
+        {{ t('nav.login') }}
+      </NuxtLink>
+      <LocaleSwitch />
+    </nav>
   </header>
   <main>
     <slot />
   </main>
   <footer>
-    Footer
+    {{ t('footer') }}
   </footer>
 </template>

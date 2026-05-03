@@ -1,8 +1,9 @@
-<script setup>
+<script setup lang="ts">
 const { locale: currentLocale, locales, setLocaleCookie } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 
 const availableLocales = computed(() => {
-  return (locales.value).filter(locale => locale.code !== currentLocale.value)
+  return locales.value.filter((locale) => locale.code !== currentLocale.value)
 })
 
 watchEffect(() => {

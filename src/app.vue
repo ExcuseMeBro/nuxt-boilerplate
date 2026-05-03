@@ -1,19 +1,19 @@
 <script setup lang="ts">
-const head = useLocaleHead({
-  addDirAttribute: true,
-  identifierAttribute: 'id',
-  addSeoAttributes: true
+const { t } = useI18n()
+const head = useLocaleHead()
+
+useSeoMeta({
+  title: () => t('meta.title'),
+  description: () => t('meta.description'),
+  ogTitle: () => t('meta.title'),
+  ogDescription: () => t('meta.description')
 })
 </script>
 
 <template>
   <div class="app">
-    <Html
-      :lang="head.htmlAttrs!.lang"
-      :dir="head.htmlAttrs!.dir"
-    >
+    <Html :lang="head.htmlAttrs?.lang" :dir="head.htmlAttrs?.dir">
       <Head>
-        <Title>Nuxt 3 Boilerplate</Title>
         <Link
           v-for="link in head.link"
           :id="link.id"

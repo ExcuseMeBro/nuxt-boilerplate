@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-  users: User[];
+  users: User[]
 }
 
 defineProps<Props>()

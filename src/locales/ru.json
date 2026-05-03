@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Nuxt Boilerplate",
+    "description": "Production-ready Nuxt starter с REST, JWT auth, i18n, Biome, Pinia и Remotion."
+  },
+  "nav": {
+    "home": "Главная",
+    "users": "Пользователи",
+    "login": "Войти",
+    "logout": "Выйти"
+  },
+  "home": {
+    "title": "Production-ready Nuxt starter",
+    "description": "Создавайте REST-first приложения с JWT auth, typed API helper, i18n, strict TypeScript, Biome, Pinia и Remotion.",
+    "restDemo": "REST API demo"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Пароль",
+    "signIn": "Войти",
+    "signingIn": "Выполняется вход...",
+    "failed": "Не удалось войти. Проверьте данные."
+  },
+  "errors": {
+    "default": "Что-то пошло не так.",
+    "notFound": "Страница не найдена",
+    "backHome": "Вернуться на главную"
+  },
+  "footer": "Собрано по Nuxt best practices.",
+  "welcome": "Добро пожаловать в Nuxt Boilerplate"
+}
