@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Nuxt Boilerplate",
-    "description": "REST, JWT auth, i18n, Biome, Pinia va Remotion bilan production-ready Nuxt starter."
+    "description": "REST, JWT auth, i18n, Biome, Pinia va lightweight animatsiyalar bilan production-ready Nuxt starter."
   },
   "nav": {
     "home": "Bosh sahifa",
@@ -11,7 +11,7 @@
   },
   "home": {
     "title": "Production-ready Nuxt starter",
-    "description": "REST-first ilovalarni JWT auth, typed API helperlar, i18n, strict TypeScript, Biome, Pinia va Remotion bilan yarating.",
+    "description": "REST-first ilovalarni JWT auth, typed API helperlar, i18n, strict TypeScript, Biome, Pinia va lightweight animatsiyalar bilan yarating.",
     "restDemo": "REST API demo"
   },
   "auth": {

@@ -12,7 +12,7 @@ Clean Nuxt starter for real projects. REST-first. JWT-ready. No GraphQL.
 - Vitest + Nuxt Test Utils
 - JWT auth helpers
 - Typed REST API helper
-- Remotion video/animation starter
+- Lightweight Vue animations with VueUse Motion
 - Docker production build
 
 ## Start
@@ -102,21 +102,19 @@ Locale files live here:
 
 Keep keys aligned in every locale.
 
-## Remotion
+## Animations
 
-Preview animation:
+Use VueUse Motion for lightweight UI animations:
 
-```bash
-npm run remotion:preview
+```vue
+<section
+  v-motion
+  :initial="{ opacity: 0, y: 24 }"
+  :enter="{ opacity: 1, y: 0, transition: { duration: 420 } }"
+>
+  Content
+</section>
 ```
-
-Render video:
-
-```bash
-npm run remotion:render
-```
-
-Files live in `remotion/`.
 
 ## Docker
 

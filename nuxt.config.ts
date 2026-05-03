@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['stores']
   },
-  modules: ['@vueuse/nuxt', '@pinia/nuxt', '@nuxtjs/i18n'],
+  modules: ['@vueuse/nuxt', '@vueuse/motion/nuxt', '@pinia/nuxt', '@nuxtjs/i18n'],
   i18n: {
     strategy: 'prefix_except_default',
     detectBrowserLanguage: {

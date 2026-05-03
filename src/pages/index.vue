@@ -13,7 +13,11 @@ const loadRestDemo = async () => {
 </script>
 
 <template>
-  <section>
+  <section
+    v-motion
+    :initial="{ opacity: 0, y: 24 }"
+    :enter="{ opacity: 1, y: 0, transition: { duration: 420 } }"
+  >
     <h1>{{ t('home.title') }}</h1>
     <p>{{ t('home.description') }}</p>
     <button @click="loadRestDemo">
